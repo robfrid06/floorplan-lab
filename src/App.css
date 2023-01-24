@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+body {
+  width: 100%;
+  height: 100%;
+  background-color: gray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  height: 100%;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*, *::before *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.FloorPlan {
+  background-color: tan;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: 
+    "bed1 bed1 bed1 hall bed2 bed2"
+    "bed1 bed1 bed1 hall bed2 bed2"
+    "kitchen living living living bed2 bed2"
+    "kitchen living living living bath1 bath1"
+    "bed3 bed3 bed3 bed3 bath2 bath2"
+    "bed3 bed3 bed3 bed3 bath2 bath2";
+}
+
+.FloorPlan > * {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.Kitchen {
+  background: url("https://i8.amplience.net/i/flooranddecor/100594449_arita-white-matte-porcelain-tile_display?fmt=auto&qlt=85");
+  background-size: cover;
+  grid-area: kitchen;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Oven {
+  background: url("https://media.istockphoto.com/id/1055591298/photo/metal-texture-surface.jpg?s=612x612&w=0&k=20&c=bNx4IfL6XOVzG17gKEznSVpyb0jIlNaL3x27hgIS7gM=");
+  background-size: cover;
+  writing-mode: vertical-lr;
+}
+
+.Sink {
+  background: url("https://media.istockphoto.com/id/1055591298/photo/metal-texture-surface.jpg?s=612x612&w=0&k=20&c=bNx4IfL6XOVzG17gKEznSVpyb0jIlNaL3x27hgIS7gM=");
+  background-size: cover;
+  writing-mode: vertical-lr;
+}
+
+.LivingRoom {
+  background: url("https://secure.img1-cg.wfcdn.com/im/75158198/resize-h600-w600%5Ecompr-r85/2649/26498312/Hardwood+Flooring.jpg");
+  background-size: cover;
+  grid-area: living;
+}
+
+.Bedroom1 {
+  background: url("https://mobileimages.lowes.com/productimages/1b3094e7-4a91-4575-9518-9bd1337e8a04/49598926.jpg?size=pdhism");
+  background-size: cover;
+  grid-area: bed1;
+}
+
+.Bedroom2 {
+  background: url("https://mobileimages.lowes.com/productimages/1b3094e7-4a91-4575-9518-9bd1337e8a04/49598926.jpg?size=pdhism");
+  background-size: cover;
+  grid-area: bed2;
+}
+
+.Bedroom3 {
+  background: url("https://mobileimages.lowes.com/productimages/1b3094e7-4a91-4575-9518-9bd1337e8a04/49598926.jpg?size=pdhism");
+  background-size: cover;
+  grid-area: bed3;
+}
+
+
+
+.Bath1 {
+  background: url("https://img.imageboss.me/modwalls/width/1400/dpr:2/s/files/1/0028/6733/1137/products/Barcelona_Matte_WEB_6e1bf333-d163-4c8d-a21e-aa3accd51e5c.png?v=1615838975");
+  background-size: cover;
+  grid-area: bath1;
+}
+
+.Bath2 {
+  background: url("https://cdn-ablmn.nitrocdn.com/oMKSNsZXrYMXmtrNmIEOjiWcSeXWPnAX/assets/images/optimized/rev-5532926/wp-content/uploads/2017/09/CALACATTA-BORGHINI--1400x788.jpg");
+  background-size: cover;
+  grid-area: bath2;
+}
+
+.Hall {
+  background: url("https://secure.img1-cg.wfcdn.com/im/75158198/resize-h600-w600%5Ecompr-r85/2649/26498312/Hardwood+Flooring.jpg");
+  background-size: cover;
+  grid-area: hall;
 }
